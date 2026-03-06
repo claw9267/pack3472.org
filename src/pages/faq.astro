@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: 'How does my son or daughter join Cub Scouts?',
+    answer: `Joining is easy! Just bring your child to one of our Pack or Den meetings and one of our
+leaders will introduce them to the group and help them meet new friends. You will be given a short
+form to fill out and pay the annual Pack dues. You can also email the Cubmaster at
+<a href="mailto:cubmaster@pack3472.org" class="text-[#003F87] underline hover:text-blue-800">cubmaster@pack3472.org</a>.`,
+  },
+  {
+    question: 'What do I need to buy for my son or daughter to get started?',
+    answer: `The Scout Store is located at <strong>10210 Holmes Road, Kansas City, MO</strong> inside the
+Boy Scouts' Heart of America Council building. Your scout will need:
+<ol class="list-decimal list-inside mt-3 space-y-2 ml-2">
+  <li><strong>Blue uniform shirt</strong> — buy big so it lasts through Boy Scouts in 5th grade</li>
+  <li><strong>Scarf &amp; slide for their rank:</strong>
+    <ul class="list-disc list-inside ml-4 mt-1 space-y-1 text-sm">
+      <li>Lions (K) — Blue Tee + Yellow Neckerchief</li>
+      <li>Tiger (1st) — Orange Neckerchief</li>
+      <li>Wolf (2nd) — Red Neckerchief</li>
+      <li>Bear (3rd) — Blue Neckerchief</li>
+      <li>Webelo I &amp; II (4th/5th) — Plaid Neckerchief</li>
+    </ul>
+  </li>
+  <li><strong>Patches:</strong> Heart of America Council patch, Pack 3472 number, World Crest</li>
+  <li><strong>Belt</strong> (for belt loops)</li>
+  <li><strong>Handbook</strong> for their rank</li>
+</ol>`,
+  },
+  {
+    question: "What's a Pack and what's a Den?",
+    answer: `In Cub Scouts, the large group of boys and girls from Kindergarten through 5th grade is
+called a <strong>Pack</strong>. We are Pack 3472. The Pack is broken down into smaller groups by age
+(rank) called <strong>Dens</strong>. Dens meet on their own once a month to work on age-appropriate
+skills and activities together.`,
+  },
+];
+---
+
+<Layout title="FAQ" description="Frequently asked questions about joining BSA Cub Scout Pack 3472 in Leawood, KS.">
+
+  <!-- Page Header -->
+  <div class="bg-[#003F87] text-white py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold">Frequently Asked Questions</h1>
+      <p class="text-blue-200 mt-2">Pack 3472 &mdash; Leawood, KS</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+
+    <p class="text-gray-600 text-lg mb-10">
+      Below is a list of commonly asked questions. If your question isn't covered here, feel free to
+      send us an email through the <a href="/contact" class="text-[#003F87] font-semibold underline hover:text-blue-800">Contact</a> page.
+    </p>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqs.map((faq, i) => (
+        <div class="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+          <details class="group">
+            <summary class="flex items-center justify-between px-6 py-5 cursor-pointer bg-white hover:bg-gray-50 transition-colors list-none">
+              <h2 class="text-lg font-semibold text-[#003F87] pr-4">
+                {faq.question}
+              </h2>
+              <svg
+                class="w-5 h-5 text-[#003F87] flex-shrink-0 transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div class="px-6 py-5 bg-gray-50 border-t border-gray-200 text-gray-700 leading-relaxed" set:html={faq.answer} />
+          </details>
+        </div>
+      ))}
+    </div>
+
+    <!-- Still have questions? -->
+    <div class="mt-12 bg-[#FFC72C] rounded-xl p-8 text-center">
+      <h2 class="text-xl font-bold text-[#003F87] mb-2">Still have questions?</h2>
+      <p class="text-gray-700 mb-4">
+        We're happy to help! Reach out to our Cubmaster and we'll get back to you.
+      </p>
+      <a href="/contact" class="inline-block bg-[#003F87] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#002d63] transition-colors">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+</Layout>

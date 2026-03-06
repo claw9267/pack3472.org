@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import leadershipData from '../data/leadership.json';
+
+const { packLeadership, denLeadership, season } = leadershipData;
+
+const ranks = [
+  { grade: 'Kindergarten', rank: 'Lions', color: 'bg-yellow-100 border-yellow-400', icon: '🦁' },
+  { grade: '1st Grade', rank: 'Tiger Cubs', color: 'bg-orange-100 border-orange-400', icon: '🐯' },
+  { grade: '2nd Grade', rank: 'Wolves', color: 'bg-blue-100 border-blue-400', icon: '🐺' },
+  { grade: '3rd Grade', rank: 'Bears', color: 'bg-amber-100 border-amber-500', icon: '🐻' },
+  { grade: '4th Grade', rank: 'Webelo I', color: 'bg-green-100 border-green-500', icon: '⚜️' },
+  { grade: '5th Grade', rank: 'Webelo II', color: 'bg-purple-100 border-purple-500', icon: '🌟' },
+];
+---
+
+<Layout title="About" description="Learn about BSA Cub Scout Pack 3472 in Leawood, KS — our mission, ranks, and dedicated volunteer leadership.">
+
+  <!-- Page Header -->
+  <div class="bg-[#003F87] text-white py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold">About Our Pack</h1>
+      <p class="text-blue-200 mt-2">Pack 3472 &mdash; Leawood, KS</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+
+    <!-- Our Pack -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">Our Pack</h2>
+      <div class="space-y-4 text-gray-700 leading-relaxed">
+        <p>
+          Pack 3472 is chartered by Prairie Star Elementary School in Leawood, KS. We hold one Pack
+          meeting and one Den meeting a month with other activities including camping, hiking, community
+          service projects and family outings on weekends. Our Pack is made up of a diverse group of
+          boys and girls that come with a wide variety of interests including sports, music, robotics,
+          computers, reading and various outdoors activities.
+        </p>
+        <p>
+          We plan camping activities that allow the entire family to come join in the fun and expect
+          kids to arrive late or leave early to accommodate their other many activities and commitments.
+          We encourage kids to be well-rounded! And siblings are always welcome!
+        </p>
+        <p>
+          For those of you new to Scouting, a Cub Scout group is known as a Pack that includes boys
+          and girls from K through 5th grade. The Pack is divided into smaller groups called Dens.
+          Dens meet on their own once a month to work on specific age appropriate skills and activities.
+          Your son or daughter will be in the same Den as they advance in rank through Cub Scouts.
+          Ranks coincide with grade levels and scouts advance rank in the spring of each year at our
+          Blue &amp; Gold Banquet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Ranks -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-6 pb-2 border-b-4 border-[#FFC72C]">Cub Scout Ranks</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {ranks.map((r) => (
+          <div class={`border-l-4 rounded-lg p-4 ${r.color}`}>
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-2xl" aria-hidden="true">{r.icon}</span>
+              <span class="font-bold text-gray-800">{r.rank}</span>
+            </div>
+            <p class="text-gray-600 text-sm">{r.grade}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Leaders / YPT -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">Our Leaders</h2>
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-6">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-[#003F87] flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <div>
+            <p class="font-semibold text-[#003F87]">Youth Protection Training (YPT)</p>
+            <p class="text-gray-600 text-sm mt-1">
+              All Pack 3472 leaders are required to complete BSA Youth Protection Training before working
+              with Scouts. This training helps ensure a safe, fun environment for every child. For more
+              information, visit <a href="https://www.scouting.org/training/youth-protection/" class="text-[#003F87] underline hover:text-blue-800" target="_blank" rel="noopener noreferrer">scouting.org/training/youth-protection</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pack Leadership Table -->
+      <h3 class="text-xl font-semibold text-[#003F87] mb-3">Pack Leadership {season}</h3>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 mb-8">
+        <table class="w-full text-sm">
+          <thead class="bg-[#003F87] text-white">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold">Role</th>
+              <th class="text-left px-4 py-3 font-semibold">Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            {packLeadership.map((leader, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-4 py-3 font-medium text-gray-700">{leader.role}</td>
+                <td class="px-4 py-3 text-gray-600">{leader.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Den Leadership Table -->
+      <h3 class="text-xl font-semibold text-[#003F87] mb-3">Den Leadership {season}</h3>
+      <div class="overflow-x-auto rounded-xl border border-gray-200">
+        <table class="w-full text-sm">
+          <thead class="bg-[#003F87] text-white">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold">Role</th>
+              <th class="text-left px-4 py-3 font-semibold">Den</th>
+              <th class="text-left px-4 py-3 font-semibold">Leader</th>
+            </tr>
+          </thead>
+          <tbody>
+            {denLeadership.map((leader, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-4 py-3 font-medium text-gray-700">{leader.role}</td>
+                <td class="px-4 py-3 text-gray-600">{leader.rank}</td>
+                <td class="px-4 py-3 text-gray-600">{leader.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-[#FFC72C] rounded-xl p-8 text-center">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-2">Interested in Joining?</h2>
+      <p class="text-gray-700 mb-6">
+        Come visit one of our Pack meetings or send us a message — we'd love to welcome your family!
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="bg-[#003F87] text-white font-bold px-8 py-3 rounded-lg hover:bg-[#002d63] transition-colors">
+          Contact Us
+        </a>
+        <a href="/faq" class="border-2 border-[#003F87] text-[#003F87] font-bold px-8 py-3 rounded-lg hover:bg-[#003F87] hover:text-white transition-colors">
+          Read the FAQ
+        </a>
+      </div>
+    </section>
+
+  </div>
+</Layout>

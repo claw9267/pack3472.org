@@ -1,0 +1,21 @@
+{
+  "season": "2024-2025",
+  "packLeadership": [
+    { "role": "Cubmaster", "name": "Heidi LaVoi-Wieme" },
+    { "role": "Assistant Cubmaster", "name": "OPEN" },
+    { "role": "Committee Chair", "name": "John Chipko" },
+    { "role": "Treasurer", "name": "Scott Wiedemann" },
+    { "role": "Charter Org Rep", "name": "Scott Susman" },
+    { "role": "Camping Coordinators", "name": "Open" },
+    { "role": "Awards Chairman", "name": "Open" },
+    { "role": "Secretary", "name": "Sarah Chipko" }
+  ],
+  "denLeadership": [
+    { "role": "Lion Den Leader", "rank": "Lions (Kindergarten)", "name": "Steve Older" },
+    { "role": "Tiger Den Leader", "rank": "Tiger Cubs (1st Grade)", "name": "Alex Fetters" },
+    { "role": "Wolf Den Leaders", "rank": "Wolves (2nd Grade)", "name": "Heath Hall" },
+    { "role": "Bear Den Leader", "rank": "Bears (3rd Grade)", "name": "Jerry LaVoi" },
+    { "role": "Webelos I Den Leader", "rank": "Webelos I (4th Grade)", "name": "Alex Fetters" },
+    { "role": "Arrow of Light Leader", "rank": "Webelos II (5th Grade)", "name": "John Chipko" }
+  ]
+}

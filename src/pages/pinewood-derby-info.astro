@@ -1,0 +1,126 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rules = [
+  { label: 'Car Kit', detail: 'Must use the official BSA Pinewood Derby kit (available at the Scout Store)' },
+  { label: 'Weight', detail: 'Maximum 5.0 oz (141.75 g) — weigh-in occurs at check-in' },
+  { label: 'Width', detail: 'Maximum 2¾ inches (6.98 cm)' },
+  { label: 'Length', detail: 'Maximum 7 inches (17.78 cm) — must fit on the track' },
+  { label: 'Height', detail: 'Maximum 3 inches (7.62 cm)' },
+  { label: 'Clearance', detail: 'Minimum ⅜ inch (9.5 mm) clearance between car bottom and track' },
+  { label: 'Axles & Wheels', detail: 'Must use the axles and wheels from the official BSA kit (no alterations to axle grooves)' },
+  { label: 'Propulsion', detail: 'No springs, rubber bands, or any added propulsion — gravity only!' },
+];
+---
+
+<Layout title="Pinewood Derby Info" description="Learn about the BSA Pinewood Derby tradition, official car rules, and race day details for Pack 3472 in Leawood, KS.">
+
+  <!-- Page Header -->
+  <div class="bg-[#003F87] text-white py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-bold">Pinewood Derby Info</h1>
+      <p class="text-blue-200 mt-2">Pack 3472 &mdash; Leawood, KS</p>
+    </div>
+  </div>
+
+  <div class="max-w-4xl mx-auto px-4 py-12">
+
+    <!-- Coming Soon Banner -->
+    <div class="bg-[#FFC72C] rounded-xl p-6 mb-10 flex items-center gap-4">
+      <div class="text-4xl" aria-hidden="true">🏎️</div>
+      <div>
+        <p class="font-bold text-[#003F87] text-lg">Race Day Details Coming Soon!</p>
+        <p class="text-gray-700">Check back here for date, location, and registration information for this year's race.</p>
+      </div>
+    </div>
+
+    <!-- History -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
+        A BSA Tradition Since 1953
+      </h2>
+      <div class="space-y-4 text-gray-700 leading-relaxed">
+        <p>
+          The Pinewood Derby is one of the most beloved traditions in Cub Scouting. Since its creation
+          in 1953 by cubmaster Don Murphy in Manhattan Beach, California, millions of Scouts and their
+          families have gathered to build, race, and celebrate handcrafted wooden cars.
+        </p>
+        <p>
+          The concept is simple and brilliant: each Scout receives an official BSA kit containing a
+          block of pine wood, plastic wheels, and metal axles. From that starting point, the Scout —
+          with help from a parent or guardian — carves, sands, paints, and decorates a custom car.
+          The cars then race down a gravity-powered aluminum track to see who built the fastest ride!
+        </p>
+        <p>
+          The Pinewood Derby isn't just about speed. It's about the time spent together building,
+          the creativity in design, and the sportsmanship shown on race day. Every Scout who participates
+          walks away with great memories — and usually a very cool-looking car.
+        </p>
+      </div>
+    </section>
+
+    <!-- Official Rules -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
+        Official Car Rules
+      </h2>
+      <p class="text-gray-600 mb-6">
+        All cars must comply with BSA Pinewood Derby standards. Cars that do not pass inspection
+        at check-in cannot race. Build within these limits to ensure your Scout gets to compete!
+      </p>
+      <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+        <table class="w-full text-sm">
+          <thead class="bg-[#003F87] text-white">
+            <tr>
+              <th class="text-left px-4 py-3 font-semibold w-1/3">Rule</th>
+              <th class="text-left px-4 py-3 font-semibold">Specification</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rules.map((rule, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-4 py-3 font-semibold text-[#003F87]">{rule.label}</td>
+                <td class="px-4 py-3 text-gray-700">{rule.detail}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-500 text-sm mt-3">
+        * Pack 3472 may adopt additional local rules. Check with your Den Leader for the latest details.
+      </p>
+    </section>
+
+    <!-- Tips Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
+        Tips for a Great Race Car
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-4">
+        {[
+          { tip: 'Maximize weight', detail: 'Get as close to 5.0 oz as possible — heavier cars tend to go faster.' },
+          { tip: 'Place weight in the back', detail: 'Positioning weight toward the rear helps the car accelerate on the track.' },
+          { tip: 'Polish the axles', detail: 'Smooth, polished axles reduce friction. Use graphite lubricant for best results.' },
+          { tip: 'Let your Scout lead', detail: "The Scout should do as much of the work as is safe and age-appropriate. It's their car!" },
+          { tip: 'Sand and paint early', detail: 'Give paint time to dry fully before adding weight or final details.' },
+          { tip: 'Test before race day', detail: 'If you have access to a track or similar surface, do a few test runs to check wheel alignment.' },
+        ].map((item) => (
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <p class="font-semibold text-[#003F87] mb-1">✅ {item.tip}</p>
+            <p class="text-gray-600 text-sm">{item.detail}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Questions CTA -->
+    <div class="bg-[#003F87] text-white rounded-xl p-8 text-center">
+      <h2 class="text-xl font-bold mb-2">Questions About the Derby?</h2>
+      <p class="text-blue-200 mb-4">Reach out to your Den Leader or the Pack leadership team.</p>
+      <a href="/contact" class="inline-block bg-[#FFC72C] text-[#003F87] font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors">
+        Contact Us
+      </a>
+    </div>
+
+  </div>
+</Layout>
