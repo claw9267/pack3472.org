@@ -3,61 +3,17 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Photos" description="Photos from BSA Cub Scout Pack 3472 activities in Leawood, KS.">
+  <h1 class="page-title">Pack Photos</h1>
+  <hr class="rule" />
+  <p>
+    Check back here for photos from our Pack activities, camping trips, Pinewood Derby, Blue &amp; Gold Banquet, and
+    more.
+  </p>
 
-  <!-- Page Header -->
-  <div class="bg-[#003F87] text-white py-10 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-bold">Pack Photos</h1>
-      <p class="text-blue-200 mt-2">Memories from Pack 3472 activities</p>
-    </div>
-  </div>
-
-  <div class="max-w-4xl mx-auto px-4 py-12">
-
-    <!-- Coming Soon -->
-    <div class="text-center mb-12">
-      <div class="text-6xl mb-4" aria-hidden="true">📸</div>
-      <h2 class="text-2xl font-bold text-[#003F87] mb-3">Photos Coming Soon!</h2>
-      <p class="text-gray-600 max-w-md mx-auto">
-        Check back here for photos from our Pack activities, camping trips, Pinewood Derby, Blue &amp; Gold Banquet, and more.
-      </p>
-    </div>
-
-    <!-- Photo Grid Placeholder -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3" aria-label="Photo gallery placeholder">
-      {Array.from({ length: 12 }).map((_, i) => (
-        <div
-          class="aspect-square bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center"
-          aria-hidden="true"
-        >
-          <svg class="w-8 h-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-      ))}
-    </div>
-
-    <!-- Activities mentioned -->
-    <section class="mt-12">
-      <h2 class="text-xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
-        Our Activities
-      </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {[
-          { label: 'Camping Trips', icon: '🏕️' },
-          { label: 'Pinewood Derby', icon: '🏎️' },
-          { label: 'Blue & Gold Banquet', icon: '🏆' },
-          { label: 'Community Service', icon: '🤝' },
-          { label: 'Hiking Adventures', icon: '🥾' },
-          { label: 'Pack Meetings', icon: '👨‍👩‍👧‍👦' },
-        ].map((activity) => (
-          <div class="bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 flex items-center gap-3">
-            <span class="text-2xl" aria-hidden="true">{activity.icon}</span>
-            <span class="font-medium text-gray-700">{activity.label}</span>
-          </div>
-        ))}
-      </div>
-    </section>
-
+  <div class="two-col">
+    <div class="placeholder photo" style="height: 190px;">Camping Trip Photos</div>
+    <div class="placeholder photo" style="height: 190px;">Pinewood Derby Photos</div>
+    <div class="placeholder photo" style="height: 190px;">Blue &amp; Gold Banquet</div>
+    <div class="placeholder photo" style="height: 190px;">Pack Meetings</div>
   </div>
 </Layout>

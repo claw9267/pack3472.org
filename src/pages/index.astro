@@ -3,130 +3,71 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home" description="Welcome to BSA Cub Scout Pack 3472 in Leawood, KS — an active, outdoor-focused pack for boys and girls in grades K-5.">
-
-  <!-- Hero Banner -->
-  <section class="bg-[#003F87] text-white py-16 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-wide mb-3">
-        PACK 3472
-      </h1>
-      <p class="text-[#FFC72C] text-xl font-semibold mb-6">Leawood, KS</p>
-      <p class="text-blue-100 text-lg max-w-2xl mx-auto">
-        An active, outdoor-focused Cub Scout pack welcoming boys and girls in grades K&ndash;5.
+  <div class="two-col">
+    <section>
+      <h1 class="section-title">Welcome!</h1>
+      <p>
+        We are glad you have found your way to the Pack 3472 website! Our pack welcomes both boys and girls in
+        grades K&ndash;5! We are a very active, outdoor focused pack! Our Cub Scouts attend Prairie Star, Sunrise Point,
+        Overland Trail, Barstow, AMI, and multiple other schools so all are welcome!!
       </p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/about" class="bg-[#FFC72C] text-[#003F87] font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors">
-          Learn About Our Pack
-        </a>
-        <a href="/contact" class="border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white hover:text-[#003F87] transition-colors">
-          Get In Touch
-        </a>
+      <p>
+        If you and your son/daughter would like to learn more about Cub Scouting, we'd love to have you visit one of
+        our monthly Pack meetings where we gather all of the kids together for fun activities!
+      </p>
+      <p><strong>WHEN:</strong> 6:30-7:45p on the second Tuesday of every month</p>
+      <p>
+        <strong>CHARTERING ORGANIZATION:</strong> PSE PTO<br />
+        Prairie Star Elementary School (West side cafeteria, through YMCA entrance)<br />
+        3800 W 143rd St, Leawood, KS 66224
+      </p>
+
+      <div class="cta-box">
+        <p class="cta-title">Want to join us?</p>
+        <a class="cta-button" href="/contact">CONTACT US</a>
       </div>
-    </div>
-  </section>
 
-  <div class="max-w-4xl mx-auto px-4 py-12">
-
-    <!-- Welcome Section -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-[#003F87] mb-6 pb-2 border-b-4 border-[#FFC72C]">
-        Welcome!
-      </h2>
-      <div class="prose prose-slate max-w-none space-y-4 text-gray-700 text-lg leading-relaxed">
-        <p>
-          We are glad you have found your way to the Pack 3472 website! Our pack welcomes both boys
-          and girls in grades K&ndash;5! We are a very active, outdoor focused pack! Our Cub Scouts
-          attend Prairie Star, Sunrise Point, Overland Trail, Barstow, AMI, and multiple other schools
-          so all are welcome!!
-        </p>
-        <p>
-          If you and your son/daughter would like to learn more about Cub Scouting, we'd love to have
-          you visit one of our monthly Pack meetings where we gather all of the kids together for fun
-          activities!
-        </p>
-      </div>
-    </section>
-
-    <!-- Meeting Info Card -->
-    <section class="mb-12">
-      <div class="bg-[#f8fafc] border border-[#e2e8f0] rounded-xl p-8 shadow-sm">
-        <h2 class="text-2xl font-bold text-[#003F87] mb-6">Pack Meetings</h2>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <div>
-            <div class="flex items-start gap-3">
-              <div class="bg-[#FFC72C] rounded-full p-2 mt-0.5 flex-shrink-0">
-                <svg class="w-5 h-5 text-[#003F87]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <p class="font-bold text-[#003F87] uppercase text-sm tracking-wide">When</p>
-                <p class="text-gray-700 font-semibold">6:30 &ndash; 7:45 PM</p>
-                <p class="text-gray-600">Second Tuesday of every month</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="flex items-start gap-3">
-              <div class="bg-[#FFC72C] rounded-full p-2 mt-0.5 flex-shrink-0">
-                <svg class="w-5 h-5 text-[#003F87]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <div>
-                <p class="font-bold text-[#003F87] uppercase text-sm tracking-wide">Chartering Organization</p>
-                <p class="text-gray-700 font-semibold">PSE PTO</p>
-                <p class="text-gray-600">Prairie Star Elementary School</p>
-                <p class="text-gray-600 text-sm">(West side cafeteria &amp; YMCA entrance)</p>
-                <p class="text-gray-600 text-sm">3800 W 143rd St, Leawood, KS 66224</p>
-              </div>
-            </div>
-          </div>
+      <div class="events-box">
+        <h3>Upcoming Events</h3>
+        <div class="event-item">
+          <strong>November Pack Meeting</strong>
+          November 12, 2024
+        </div>
+        <div class="event-item">
+          <strong>December Pack Meeting</strong>
+          December 10, 2024
+        </div>
+        <div class="event-item">
+          <strong>Pinewood Derby</strong>
+          January 11, 2025
+        </div>
+        <div class="event-item">
+          <strong>Blue &amp; Gold Banquet</strong>
+          February 11, 2025
         </div>
       </div>
     </section>
 
-    <!-- Upcoming Events Placeholder -->
-    <section class="mb-12">
-      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
-        Upcoming Events
-      </h2>
-      <div class="bg-blue-50 border border-blue-200 rounded-xl p-8 text-center">
-        <svg class="w-12 h-12 text-[#003F87] mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-        </svg>
-        <p class="text-[#003F87] font-semibold text-lg mb-1">Calendar Coming Soon</p>
-        <p class="text-gray-600">Check back here for upcoming Pack events and activities.</p>
-        <p class="text-gray-500 text-sm mt-2">
-          In the meantime, join us at our next Pack meeting — second Tuesday of every month at 6:30 PM!
-        </p>
-      </div>
-    </section>
-
-    <!-- Quick Links -->
     <section>
-      <h2 class="text-2xl font-bold text-[#003F87] mb-6 pb-2 border-b-4 border-[#FFC72C]">
-        Quick Links
-      </h2>
-      <div class="grid sm:grid-cols-3 gap-4">
-        <a href="/about" class="bg-[#003F87] text-white rounded-xl p-6 text-center hover:bg-[#1a5fa8] transition-colors group">
-          <div class="text-3xl mb-2">🏕️</div>
-          <div class="font-bold">About Our Pack</div>
-          <div class="text-blue-200 text-sm mt-1">Our story &amp; leadership</div>
-        </a>
-        <a href="/faq" class="bg-[#003F87] text-white rounded-xl p-6 text-center hover:bg-[#1a5fa8] transition-colors group">
-          <div class="text-3xl mb-2">❓</div>
-          <div class="font-bold">FAQ</div>
-          <div class="text-blue-200 text-sm mt-1">How to join &amp; what to buy</div>
-        </a>
-        <a href="/contact" class="bg-[#FFC72C] text-[#003F87] rounded-xl p-6 text-center hover:bg-yellow-300 transition-colors group">
-          <div class="text-3xl mb-2">✉️</div>
-          <div class="font-bold">Contact Us</div>
-          <div class="text-blue-700 text-sm mt-1">Reach out to our leaders</div>
-        </a>
-      </div>
-    </section>
+      <h2 class="page-title">Pack 3472 In Action!</h2>
+      <div class="placeholder video">Video / Slideshow</div>
 
+      <div class="ranks-strip">
+        Cub Scout rank adventures for Lions, Tigers, Wolves, Bears, Webelos, and Arrow of Light.
+      </div>
+
+      <h2 class="section-title">Den Meetings</h2>
+      <div class="den-list">
+        Lions = 2nd Tuesday<br />
+        Tigers = 1st Thursday<br />
+        Wolves = 4th Tuesday<br />
+        Bears = 4th Thursday<br />
+        Webelos 1 = 1st Thursday<br />
+        Arrow of Light = 3rd Tuesday
+      </div>
+
+      <h2 class="page-title" style="margin-top: 18px;">Pinewood Derby</h2>
+      <div class="placeholder photo">Pinewood Derby Photos</div>
+    </section>
   </div>
 </Layout>

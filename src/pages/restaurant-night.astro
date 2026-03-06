@@ -3,77 +3,23 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Restaurant Night" description="Pack 3472 Restaurant Night fundraiser events at local restaurants in Leawood, KS.">
+  <h1 class="page-title">Restaurant Night</h1>
+  <hr class="rule" />
 
-  <!-- Page Header -->
-  <div class="bg-[#003F87] text-white py-10 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-bold">Restaurant Night</h1>
-      <p class="text-blue-200 mt-2">Pack 3472 Fundraiser Events</p>
-    </div>
+  <p>
+    Restaurant Night events are fun family fundraisers where Pack 3472 partners with local restaurants to support our
+    Pack's activities and adventures. A portion of sales made during our designated event window goes back to our
+    Scouts.
+  </p>
+
+  <div class="events-box" style="margin-top: 10px;">
+    <h3>How It Works</h3>
+    <p><strong style="color: #cc6600;">1) Watch for announcements.</strong> We'll announce upcoming events by email and at meetings.</p>
+    <p><strong style="color: #cc6600;">2) Dine out.</strong> Head to the featured restaurant on event night with family and friends.</p>
+    <p><strong style="color: #cc6600;">3) Support Scouting.</strong> A percentage of sales benefits Pack 3472.</p>
   </div>
 
-  <div class="max-w-4xl mx-auto px-4 py-12">
-
-    <!-- Coming Soon Banner -->
-    <div class="bg-[#FFC72C] rounded-xl p-8 text-center mb-10">
-      <div class="text-5xl mb-4" aria-hidden="true">🍕</div>
-      <h2 class="text-2xl font-bold text-[#003F87] mb-2">Stay Tuned for Our Next Restaurant Night!</h2>
-      <p class="text-gray-700">
-        Details for our next fundraiser event will be posted here soon. Follow along to support Pack 3472!
-      </p>
-    </div>
-
-    <!-- What is Restaurant Night -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold text-[#003F87] mb-4 pb-2 border-b-4 border-[#FFC72C]">
-        What Is Restaurant Night?
-      </h2>
-      <div class="space-y-4 text-gray-700 leading-relaxed">
-        <p>
-          Restaurant Night events are fun family fundraisers where Pack 3472 partners with local
-          restaurants to support our Pack's activities and adventures. A portion of sales made
-          during our designated event window goes back to our Scouts!
-        </p>
-        <p>
-          It's easy to participate: just dine at the featured restaurant on the event night, mention
-          Pack 3472 (or show a flyer), and you're helping fund camps, field trips, awards, and
-          other Scout activities.
-        </p>
-        <p>
-          Restaurant Night events are a great way for the whole family to get together with other
-          Pack families and support our Scouts at the same time. We hope to see you there!
-        </p>
-      </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold text-[#003F87] mb-6 pb-2 border-b-4 border-[#FFC72C]">
-        How It Works
-      </h2>
-      <div class="grid sm:grid-cols-3 gap-4">
-        {[
-          { step: '1', icon: '📅', title: 'Watch for Announcements', desc: 'We\'ll announce upcoming Restaurant Nights via email and at Pack meetings.' },
-          { step: '2', icon: '🍽️', title: 'Dine Out', desc: 'Head to the featured restaurant on the event night with your family and friends.' },
-          { step: '3', icon: '💛', title: 'Support Scouting', desc: 'A percentage of sales benefits Pack 3472 automatically — no special steps needed!' },
-        ].map((item) => (
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-5 text-center">
-            <div class="text-3xl mb-3" aria-hidden="true">{item.icon}</div>
-            <p class="font-bold text-[#003F87] mb-1">Step {item.step}: {item.title}</p>
-            <p class="text-gray-600 text-sm">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <div class="bg-[#003F87] text-white rounded-xl p-8 text-center">
-      <h2 class="text-xl font-bold mb-2">Questions About Restaurant Night?</h2>
-      <p class="text-blue-200 mb-4">Contact our Pack leadership for more information.</p>
-      <a href="/contact" class="inline-block bg-[#FFC72C] text-[#003F87] font-bold px-8 py-3 rounded-lg hover:bg-yellow-300 transition-colors">
-        Get In Touch
-      </a>
-    </div>
-
-  </div>
+  <p style="margin-top: 14px;">
+    Questions? <a href="/contact">Contact our Pack leadership</a> for details on the next fundraiser night.
+  </p>
 </Layout>
